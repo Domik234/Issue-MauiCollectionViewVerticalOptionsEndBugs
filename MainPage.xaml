@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid ColumnDefinitions="*" RowDefinitions="auto, *">
+        <ContentView
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="Red"
+            HeightRequest="48">
+            <HorizontalStackLayout>
+                <Button Clicked="New_Clicked" Text="Add 5" />
+                <Button Clicked="Remove_Clicked" Text="Remove Last" />
+                <Button
+                    x:Name="_Header"
+                    Clicked="Header_Clicked"
+                    Text="H: Off" />
+                <Button
+                    x:Name="_Footer"
+                    Clicked="Footer_Clicked"
+                    Text="F: Off" />
+            </HorizontalStackLayout>
+        </ContentView>
+        <CollectionView
+            x:Name="_CV"
+            Grid.Row="1"
+            VerticalOptions="End" />
+
+    </Grid>
+
+</ContentPage>
