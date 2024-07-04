@@ -11,6 +11,7 @@
             BackgroundColor="Red"
             HeightRequest="48">
             <HorizontalStackLayout>
+                <Button x:Name="_SwitchVO" Clicked="CVChange_Clicked" Text="CV: End" />
                 <Button Clicked="New_Clicked" Text="Add 5" />
                 <Button Clicked="Remove_Clicked" Text="Remove Last" />
                 <Button

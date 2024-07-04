@@ -67,6 +67,20 @@ namespace MauiApp1
             return card;
         }
 
+        private void CVChange_Clicked(object sender, EventArgs e)
+        {
+            if (_CV.VerticalOptions == LayoutOptions.Fill)
+            {
+                _CV.VerticalOptions = LayoutOptions.End;
+                _SwitchVO.Text = "CV: End";
+            }
+            else /*if (_CV.VerticalOptions != LayoutOptions.Fill)*/
+            {
+                _CV.VerticalOptions = LayoutOptions.Fill;
+                _SwitchVO.Text = "CV: Fill";
+            }
+        }
+
         private void New_Clicked(object sender, EventArgs e)
         {
             for (int i = 0; i < 5; i++)
@@ -89,7 +103,7 @@ namespace MauiApp1
         {
             if (_CV.Header == null)
             {
-                _CV.Header = new ContentView { HeightRequest = 64 };
+                _CV.Header = new ContentView { HeightRequest = 64, BackgroundColor = Colors.Yellow };
                 _Header.Text = "H: On";
             }
             else
@@ -103,7 +117,7 @@ namespace MauiApp1
         {
             if (_CV.Footer == null)
             {
-                _CV.Footer = new ContentView { HeightRequest = 64 };
+                _CV.Footer = new ContentView { HeightRequest = 64, BackgroundColor = Colors.Orange };
                 _Footer.Text = "F: On";
             }
             else
